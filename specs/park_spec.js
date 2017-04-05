@@ -8,8 +8,8 @@ describe("Park Tests", function(){
   var bronto
   beforeEach(function(){
     myPark = new Park()
-    tRex = new Dinosaur("Tyrannosaurus Rex", 4)
-    bronto = new Dinosaur("Brontosaurus", 5)
+    tRex = new Dinosaur("Tyrannosaurus Rex", 1.5)
+    bronto = new Dinosaur("Brontosaurus", 3)
   })
 
   it("Can add a dinosaur", function(){
@@ -30,6 +30,14 @@ describe("Park Tests", function(){
         myPark.removeType("Brontosaurus")
        assert.strictEqual(1, Object.keys(myPark.enclosure).length)
     })
+
+      it("find high fertility breeds", function(){
+        myPark.add(tRex)
+        myPark.add(bronto)
+        myPark.add(bronto)
+        assert.strictEqual([ 'Brontosaurus' ], myPark.highFertility())
+
+      })
 
 
 

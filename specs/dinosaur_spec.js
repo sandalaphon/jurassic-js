@@ -4,7 +4,7 @@ var Dinosaur = require('../dinosaur.js')
 describe("Dinosaur Tests", function(){
   var tRex ;
   beforeEach(function(){
-    tRex = new Dinosaur("Tyrannosaurus Rex", 4)
+    tRex = new Dinosaur("Tyrannosaurus Rex", 1.5)
   })
 
   it("Dinosaur type ", function(){

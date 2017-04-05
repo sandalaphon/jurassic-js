@@ -4,7 +4,7 @@ this.fertility = fertility
 }
 
 Dinosaur.prototype = {
-
+  
 }
 
 
